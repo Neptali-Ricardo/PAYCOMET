@@ -1,19 +1,31 @@
-@font-face {
+
+/* FONTS */
+
+@font-face{
     font-family: 'Roboto', sans-serif;
+    @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+    font-weight:normal;
+    font-style:normal;
 }
 
-/*GLOBALS*/
-:root {
-    --color-white: #ffffff;
-    --color-blue-prim: #006DFF;
-    --color-daybreak-blue: #096DD9;
-    --color-bck: #000000;
-    --color-bg-gray: #FAFAFA;
-    --color-gray-300: #D9DBE1;
-    --color-gray-700: #969BAB;
-    --color-gray-900: #18191F;
-    --color-neutro: #D9D9D9;
+@font-face{
+    font-family: 'Roboto', sans-serif;
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+    font-weight:normal;
+    font-style:normal;
 }
+
+/* GLOBALS */
+
+$color-whit: #ffffff;
+$color-blue-prim: #006DFF;
+$color-daybreak-blue: #096DD9;
+$color-bck: #000000;
+$color-bg-gray: #FAFAFA;
+$color-gray-300: #D9DBE1;
+$color-gray-700: #969BAB;
+$color-gray-900: #18191F;
+$color-neutro: #D9D9D9;
 
 html {
     height: 100%;
@@ -22,16 +34,10 @@ html {
 body {
     font-family: 'Roboto', sans-serif;
     line-height: 1.1;
-    color: var(--color-gray-900);
+    color: $color-gray-900;
     margin: 0;
-    background: linear-gradient(to right, var(--color-white) 51%, var(--color-bg-gray)49%);
+    background: linear-gradient(to right, $color-whit 51%, $color-bg-gray 49%);
     background-size: 100% 100%;
-}
-
-@media screen and (max-width: 1160px) {
-    body {
-        background: var(--color-bg-gray);
-    }
 }
 
 /* Utilities */
@@ -58,25 +64,25 @@ body {
 }
 
 .gray-300 {
-    color: var(--color-gray-300);
+    color: $color-gray-300 ;
 }
 
 .gray-700 {
-    color: var(--color-gray-700);
+    color: $color-gray-700;
 }
 
 .gray-900 {
-    color: var(--color-gray-900);
+    color: $color-gray-900;
 }
 
 .bg-gray {
-    background-color: var(--color-bg-gray);
+    background-color: $color-bg-gray;
 }
 
 .bg-daybreak-blue {
-    background-color: var(--color-daybreak-blue);
+    background-color: $color-daybreak-blue ;
 }
-/* Fin Utilities */
+/* END Utilities */
 
 
 /* Header */
@@ -100,13 +106,13 @@ body {
 .language-selector {
     width: 136px;
     height: 32px;
-    background-color: var(--color-white);
+    background-color: $color-whit;
     font-size: 14px;
-    color: var(--color-bck);
+    color: $color-bck;
     font-weight: 400;
     padding: 5px 16px;
     border-radius: 2px;
-    border: 1px solid var(--color-neutro);
+    border: 1px solid $color-neutro ;
     display: flex;
     align-items: center;
 
@@ -141,36 +147,16 @@ body {
 }
 
 .language-selector:focus-within {
-    border-color: var(--color-neutro);
+    border-color: $color-neutro ;
 }
 
 .language-selector select{
     margin-right: 5.5px;
 }
-
-@media (max-width: 375px) {
-    .custom-logo-header{
-        width: 181px;
-    }
-
-    .language-selector{
-        width: 99.6px;
-        height: 24.5px;
-        padding: 3.5px 5px;
-
-        img{
-            width: 20px;
-            margin-right: 5px;
-        }
-        .icon-next{
-            width: 6px;
-        }
-    }
-}
-/* Fin Header */
+/* END Header */
 
 
-/*Container*/
+/* Container */
 .container {
     width: 100%;
     max-width: 100%;
@@ -180,7 +166,7 @@ body {
 }
 
 .bg-right {
-    background-color: var(--color-bg-gray);
+    background-color: $color-bg-gray;
 }
 
 .column {
@@ -194,7 +180,7 @@ body {
     margin-left: auto;
     margin-right: 110px;
     padding: 24px;
-    color: var(--color-gray-700);
+    color: $color-gray-700;
     font-size: 16px;
     font-weight: 500;
     line-height: 24px;
@@ -205,13 +191,13 @@ body {
 
     h1 {
         font-size: 48px;
-        color: var(--color-gray-900);
+        color: $color-gray-900;
         line-height: 44px;
         margin-bottom: 24px;
     }
 
     span {
-        color: var(--color-gray-900);
+        color: $color-gray-900;
     }
 }
 
@@ -224,40 +210,7 @@ body {
     flex-direction: column;
     align-items: center;
 }
-
-@media (max-width: 375px) {
-
-    .container {
-        align-content: flex-start;
-    }
-
-    .column{
-        justify-content: center;
-    }
-
-    .column-left{
-        width: 327px;
-        padding: 0 24px 24px;
-        margin: 0;
-        font-size: 14px;
-        text-align: center;
-
-        p{
-            margin-bottom: 0;
-        }
-
-        h1{
-            font-size: 32px;
-            margin-bottom: 8px;
-        }
-    }
-
-    .column-right {
-        padding: 0 24px;
-        margin: 0;
-    }
-}
-/*Fin container*/
+/* END Container */
 
 
 /* Icons-flags */
@@ -272,33 +225,39 @@ body {
     p {
         font-size: 14px;
         font-weight: 500;
-        color: var(--color-gray-900);
+        color: $color-gray-900;
         text-align: left;
         margin: 0;
     }
 }
 
 .flags {
+    align-items: center;
     display: flex;
     justify-content: flex-end;
-    align-items: center;
 
     img {
         max-width: 20px;
         margin-right: 2px;
     }
 }
-
-@media (max-width: 375px) {
-    .content-card {
-        width: 327px;
-    }
-}
-/* Icons-flags Fin */
+/* END Icons-flags */
 
 
-/* Pay-button*/
+/* Pay-button */
 .input-pay-card {
+    width: 422px;
+    height: 48px;
+    border: solid 1px $color-gray-300 ;
+    border-radius: 4px;
+    margin: 0 24px 8px;
+    background: $color-whit;
+    font-size: 14px;
+    font-weight: 400;
+    color: $color-gray-700;
+    display: flex;
+    align-items: center;
+
     input[name="card-num"],
     input[name="MM/AA"],
     input[name="CVC"] {
@@ -326,20 +285,6 @@ body {
     }
 }
 
-.input-pay-card {
-    width: 422px;
-    height: 48px;
-    border: solid 1px var(--color-gray-300);
-    border-radius: 4px;
-    margin: 0 24px 8px;
-    background: var(--color-white);
-    font-size: 14px;
-    font-weight: 400;
-    color: var(--color-gray-700);
-    display: flex;
-    align-items: center;
-}
-
 .input-pay-card img {
     width: 28px;
     margin-left: 11px;
@@ -362,8 +307,8 @@ body {
     border-radius: 4px;
     padding: 0 12px;
     margin: 0 24px 8px;
-    color: var(--color-white);
-    background: var(--color-bck);
+    color: $color-whit;
+    background: $color-bck;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -374,82 +319,49 @@ body {
 }
 
 .pay-button img:not(:last-child) {
-    border-right: 1px solid var(--color-white);
+    border-right: 1px solid $color-whit;
     padding-right: 8px;
 }
 
 .pay-button:hover {
-    background: var(--color-daybreak-blue);
+    background: $color-daybreak-blue ;
 }
 
 .pay-blue {
-    background: var(--color-blue-prim);
+    background: $color-blue-prim;
     margin-bottom: 32px;
 }
-
-@media (max-width: 375px) {
-
-    .input-pay-card {
-
-        width: 327px;
-        margin: 0 0 8px;
-
-        input[name="card-num"] {
-            width: 159px;
-            margin-left: 14px;
-        }
-
-        input[name="CVC"] {
-            width: 32px;
-        }
-    }
-
-    .pay-button {
-        width: 327px;
-        margin: 0 0 8px;
-    }
-    .pay-blue {
-        margin-bottom: 24px;
-    }
-}
-/* Pay-button Fin*/
+/* END Pay-button*/
 
 
 /* line-text */
 .text-container {
     width: 422px;
-    display: flex;
-    flex-direction: row;
-    text-transform: uppercase;
+    padding: 32px 0 32px;
+    margin: 0;
     border: none;
     font-size: 12px;
     font-weight: 500;
-    margin: 0;
-    padding: 32px 0 32px;
+    display: flex;
+    flex-direction: row;
+    text-transform: uppercase;
 }
 
 .line-text {
+    margin: 0;
     text-align: center;
     flex: 0.5 0 auto;
-    margin: 0;
 }
 
 .text-container:before,
 .text-container:after {
-    content: "";
-    border-bottom: 1px solid var(--color-gray-300);
-    flex: 1 0 auto;
-    height: 0.5em;
+    height: 0.5rem;
     margin: 0;
+    content: "";
+    border-bottom: 1px solid $color-gray-300 ;
+    flex: 1 0 auto;
 }
-
-@media (max-width: 375px) {
-    .text-container {
-        padding: 24px 0 24px;
-        width: 327px;
-    }
-}
-/* line-text Fin */
+/* END line-text */
 
 
 /* Payment-method-button */
@@ -459,13 +371,13 @@ body {
 }
 
 .payment-method-button {
-    max-height: 70px;
+    height: 70px;
+    font-size: 14px;
+    font-weight: 500;
+    color: $color-gray-900;
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-size: 14px;
-    font-weight: 500;
-    color: var(--color-gray-900);
 }
 
 .payment-method-button p {
@@ -477,9 +389,9 @@ body {
     width: 87px;
     height: 48px;
     padding: 8px 12px;
-    border: 1px solid var(--color-gray-300);
+    border: 1px solid $color-gray-300 ;
     border-radius: 4px;
-    background: var(--color-white);
+    background: $color-whit;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -490,29 +402,14 @@ body {
 }
 
 .custom-logo {
-    margin: 24px;
     width: 208px;
+    margin: 24px;
 }
-
-@media (max-width: 375px) {
-
-    .content-payment-method{
-        gap: 10px;
-    }
-
-    .payment-box-button {
-        width:70px;
-    }
-
-    .custom-logo {
-        margin-bottom: 0;
-    }
-}
-/* Payment-method-button Fin*/
+/* END Payment-method-button */
 
 
-/*Footer*/
-.columna4 {
+/* Footer */
+.footer-column {
     grid-template-columns: 2fr 1fr 1fr;
 }
 
@@ -528,45 +425,158 @@ footer{
 }
 
 .contact {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
     font-weight: 500;
     font-size: 12px;
     line-height: 20px;
-    color: var(--color-gray-700);
+    color: $color-gray-700;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
 .contact-link {
-    display: flex;
-    justify-content: flex-start;
     font-weight: 500;
     font-size: 12px;
+    display: flex;
+    justify-content: flex-start;
 }
 
 .contact-link a {
     text-decoration: none;
-    color: var(--color-gray-700);
+    color: $color-gray-700;
 }
 
 .contact-link a:not(:last-child) {
     margin-right: 29px;
 }
+/* END Footer*/
 
-@media (max-width: 375px){
 
-    footer{
-        text-align: center;
-        display: block;
+/************ RESPONSIVE ************/
+@media (max-width: 1200px){
+    .container {
+        align-content: flex-start;
     }
-
+    .column{
+        justify-content: center;
+    }
+    .column-left{
+        margin-top: 0;
+    }
+    .column-right {
+        margin-left: 57px;
+        margin-top: 0;
+    }
+    .content-card {
+        width: 327px;
+    }
+    .input-pay-card {
+        width: 327px;
+        margin: 0 0 8px;
+        input[name="card-num"] {
+            width: 159px;
+            margin-left: 14px;
+        }
+        input[name="CVC"] {
+            width: 32px;
+        }
+    }
+    .pay-button {
+        width: 327px;
+        margin: 0 0 8px;
+    }
+    .pay-blue {
+        margin-bottom: 24px;
+    }
+    .text-container {
+        width: 327px;
+        padding: 24px 0 24px;
+    }
+    .line-text {
+        flex: 1.5 0 auto;
+    }
+    .content-payment-method{
+        width: 327px;
+        gap: 16px;
+    }
+    .payment-box-button {
+        width:70px;
+    }
+    .custom-logo {
+        margin-bottom: 0;
+    }
     .footer-contact {
         width: 375px;
-        padding: 24px 24px 14px;
+        padding: 24px 0;
+        margin: 0 100px 0 auto;
+    }
+}
+
+@media (max-width: 1024px){
+    .footer-contact{
+        margin: 0 110px 0 auto;
+    }
+}
+
+@media (max-width: 992px){
+
+    body {
+        background: $color-bg-gray;
+    }
+    .container {
+        display: block;
+    }
+    .custom-logo-header{
+        width: 181px;
+    }
+    .language-selector{
+        width: 99.6px;
+        height: 24.5px;
+        padding: 3.5px 5px;
+        img{
+            width: 20px;
+            margin-right: 5px;
+        }
+        .icon-next{
+            width: 6px;
+        }
+    }
+    .column-left{
+        margin: 0;
+        text-align: center;
+    }
+    .column-right {
+        padding: 0 24px;
+        margin: 0;
+    }
+    footer{
+        text-align: center;
+        display: flex;
+        justify-content: center;
+    }
+    .footer-contact {
+        width: 375px;
+        padding: 24px 24px;
+        margin: 0;
         display: flex;
         align-items: center;
         flex-direction: column;
-        margin: 0;
+    }
+
+}
+
+@media (max-width: 576px){
+
+    .column-left{
+        width: 327px;
+        padding: 0 24px 24px;
+        font-size: 14px;
+        p{
+            margin-bottom: 0;
+        }
+        h1{
+            font-size: 32px;
+            margin-bottom: 8px;
+        }
     }
 }
-/*Footer Fin*/
